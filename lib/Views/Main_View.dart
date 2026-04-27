@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nbn_basketball/helper/constants.dart';
 
 import '../Widgets/Custom_Button.dart';
 import '../Widgets/Team_Title.dart';
@@ -15,18 +16,18 @@ class _MainViewState extends State<MainView> {
   int homePoints = 0;
   int lastPoint = 0;
 
-  String? team;
+  String? teamName;
 
   @override
   Widget build(BuildContext context) {
     void updateScore(int pts, String team) {
       setState(() {
-        if (team == "Home") {
+        if (team == kTeamOne) {
           homePoints += pts;
-          team = "Home";
+          teamName = kTeamOne;
         } else {
           awayPoints += pts;
-          team = "Away";
+          teamName = kTeamTwo;
         }
         lastPoint = pts;
       });
@@ -73,7 +74,7 @@ class _MainViewState extends State<MainView> {
                             style: TextStyle(color: Colors.white),
                           ),
                           TextSpan(
-                            text: lastPoint != 0 ? "$team" : "- ",
+                            text: lastPoint != 0 ? teamName : "- ",
                             style: TextStyle(
                               color: Colors.deepOrange,
                               fontWeight: FontWeight.bold,
@@ -96,7 +97,7 @@ class _MainViewState extends State<MainView> {
                       elevation: 20,
                       child: Column(
                         children: [
-                          TeamTitle(title: 'HOME'),
+                          TeamTitle(title: kTeamOne),
 
                           SizedBox(
                             height: 250,
@@ -113,19 +114,19 @@ class _MainViewState extends State<MainView> {
                             ),
                           ),
                           CustomButton(
-                            onPress: () => updateScore(1, "Home"),
+                            onPress: () => updateScore(1, kTeamOne),
                             label: "+1 pts",
-                            team: "home",
+                            team: kTeamOne,
                           ),
                           CustomButton(
-                            onPress: () => updateScore(2, "Home"),
+                            onPress: () => updateScore(2, kTeamOne),
                             label: "+2 pts",
-                            team: "Home",
+                            team: kTeamOne,
                           ),
                           CustomButton(
-                            onPress: () => updateScore(3, "Home"),
+                            onPress: () => updateScore(3, kTeamOne),
                             label: "+3 pts",
-                            team: "home",
+                            team: kTeamOne,
                           ),
                         ],
                       ),
@@ -144,7 +145,7 @@ class _MainViewState extends State<MainView> {
                     child: Card(
                       child: Column(
                         children: [
-                          TeamTitle(title: "AWAY"),
+                          TeamTitle(title: kTeamTwo),
                           SizedBox(
                             width: MediaQuery.widthOf(context) * .45,
                             height: 250,
@@ -158,19 +159,19 @@ class _MainViewState extends State<MainView> {
                           ),
 
                           CustomButton(
-                            onPress: () => updateScore(1, "AWAY"),
+                            onPress: () => updateScore(1, kTeamTwo),
                             label: "+1 pts",
-                            team: "AWAY",
+                            team: kTeamTwo,
                           ),
                           CustomButton(
-                            onPress: () => updateScore(2, "AWAY"),
+                            onPress: () => updateScore(2, kTeamTwo),
                             label: "+2 pts",
-                            team: "AWAY",
+                            team: kTeamTwo,
                           ),
                           CustomButton(
-                            onPress: () => updateScore(3, "AWAY"),
+                            onPress: () => updateScore(3, kTeamTwo),
                             label: "+3 pts",
-                            team: "AWAY",
+                            team: kTeamTwo,
                           ),
                         ],
                       ),
@@ -186,7 +187,7 @@ class _MainViewState extends State<MainView> {
                   homePoints = 0;
                   awayPoints = 0;
                   lastPoint = 0;
-                  team = "";
+                  teamName = "";
                 });
               },
 
