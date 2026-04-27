@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nbn_basketball/helper/constants.dart';
 
 import '../Widgets/Custom_Button.dart';
+import '../Widgets/Custom_Text.dart';
 import '../Widgets/Team_Title.dart';
 
 class MainView extends StatefulWidget {
@@ -36,7 +37,7 @@ class _MainViewState extends State<MainView> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Point Counter 🏀",
+          "NBN : 🏀 Counter",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.deepOrange,
@@ -46,47 +47,7 @@ class _MainViewState extends State<MainView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  elevation: 20,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: RichText(
-                      text: TextSpan(
-                        style: TextStyle(fontSize: 28),
-                        children: [
-                          TextSpan(
-                            text: "Last : ",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          TextSpan(
-                            text: lastPoint != 0 ? "+$lastPoint " : "- ",
-                            style: TextStyle(
-                              color: Colors.deepOrange,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          TextSpan(
-                            text: lastPoint != 0 ? "pts " : "- ",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          TextSpan(
-                            text: lastPoint != 0 ? teamName : "- ",
-                            style: TextStyle(
-                              color: Colors.deepOrange,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            CustomText(lastPoint: lastPoint, teamName: teamName),
             IntrinsicHeight(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
