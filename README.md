@@ -50,10 +50,20 @@
 
 <div align="center">
 
-| 🏀 Main Screen |
-|:-------------:|
-| <img src="screenshots/MainView.png" width="250"> |
-| Home vs Away score counter |
+| 🏀 Start View | 📊 Two Teams View |
+|:-------------:|:-----------------:|
+| <img src="screenshots/StartView.png" width="200"> | <img src="screenshots/TwoView.png" width="200"> |
+| Initial scoreboard (0-0) | Both teams with scoring buttons |
+
+| 🏠 Home Team Score | 🏠 Home Team Score +3 |
+|:------------------:|:---------------------:|
+| <img src="screenshots/HomeTeamScore.png" width="200"> | <img src="screenshots/HomeTeamScore3.png" width="200"> |
+| Home team scoring | Home team with +3 points |
+
+| ✈️ Away Team Score | ✈️ Away Team Score +2 |
+|:------------------:|:---------------------:|
+| <img src="screenshots/AwayTeamScore.png" width="200"> | <img src="screenshots/AwayTeamScore2.png" width="200"> |
+| Away team scoring | Away team with +2 points |
 
 </div>
 
