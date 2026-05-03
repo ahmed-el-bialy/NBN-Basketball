@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     required this.onPress,
     required this.label,
-    required this.team,
+
   });
 
   final VoidCallback onPress;
   final String label;
-  final String team;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: Text(
             label,
-            style: TextStyle(color: Colors.white, fontSize: 18),
+            style: TextStyle(color: Colors.white, fontSize: 18.sp),
             textAlign: TextAlign.center,
           ),
         ),

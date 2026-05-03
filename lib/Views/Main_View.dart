@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nbn_basketball/helper/constants.dart';
 
 import '../Widgets/Custom_Button.dart';
@@ -68,7 +69,7 @@ class _MainViewState extends State<MainView> {
                               child: Text(
                                 "$homePoints",
                                 style: TextStyle(
-                                  fontSize: 170,
+                                  fontSize: 170.sp,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -77,17 +78,14 @@ class _MainViewState extends State<MainView> {
                           CustomButton(
                             onPress: () => updateScore(1, kTeamOne),
                             label: "+1 pts",
-                            team: kTeamOne,
                           ),
                           CustomButton(
                             onPress: () => updateScore(2, kTeamOne),
                             label: "+2 pts",
-                            team: kTeamOne,
                           ),
                           CustomButton(
                             onPress: () => updateScore(3, kTeamOne),
                             label: "+3 pts",
-                            team: kTeamOne,
                           ),
                         ],
                       ),
@@ -114,7 +112,7 @@ class _MainViewState extends State<MainView> {
                               fit: BoxFit.contain,
                               child: Text(
                                 "$awayPoints",
-                                style: TextStyle(fontSize: 170),
+                                style: TextStyle(fontSize: 170.sp),
                               ),
                             ),
                           ),
@@ -122,17 +120,14 @@ class _MainViewState extends State<MainView> {
                           CustomButton(
                             onPress: () => updateScore(1, kTeamTwo),
                             label: "+1 pts",
-                            team: kTeamTwo,
                           ),
                           CustomButton(
                             onPress: () => updateScore(2, kTeamTwo),
                             label: "+2 pts",
-                            team: kTeamTwo,
                           ),
                           CustomButton(
                             onPress: () => updateScore(3, kTeamTwo),
                             label: "+3 pts",
-                            team: kTeamTwo,
                           ),
                         ],
                       ),
@@ -159,7 +154,7 @@ class _MainViewState extends State<MainView> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   "Reset",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: 20.sp),
                 ),
               ),
             ),
