@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'Views/Main_View.dart';
 
@@ -11,10 +12,15 @@ class NBNBasketball extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: ThemeData(
-          brightness: Brightness.dark,
-        ),
-        debugShowCheckedModeBanner: false, home: MainView());
+    return ScreenUtilInit(
+      minTextAdapt: true,
+      splitScreenMode: true,
+      designSize: const Size(360, 690),
+      child: MaterialApp(
+        theme: ThemeData(brightness: Brightness.dark),
+        debugShowCheckedModeBanner: false,
+        home: MainView(),
+      ),
+    );
   }
 }
