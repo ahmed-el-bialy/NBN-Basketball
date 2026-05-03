@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomText extends StatelessWidget {
   const CustomText({
@@ -22,7 +23,7 @@ class CustomText extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: RichText(
               text: TextSpan(
-                style: TextStyle(fontSize: 28),
+                style: TextStyle(fontSize: 25.sp),
                 children: [
                   TextSpan(
                     text: "Last : ",

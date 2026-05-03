@@ -54,7 +54,7 @@ class _MainViewState extends State<MainView> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
                     child: Card(
                       elevation: 20,
                       child: Column(
@@ -62,14 +62,14 @@ class _MainViewState extends State<MainView> {
                           TeamTitle(title: kTeamOne),
 
                           SizedBox(
-                            height: 250,
-                            width: MediaQuery.widthOf(context) * .45,
+                            height: 200.h,
+                            width: 150.w,
                             child: FittedBox(
                               fit: BoxFit.contain,
                               child: Text(
                                 "$homePoints",
                                 style: TextStyle(
-                                  fontSize: 170.sp,
+                                  fontSize: 150.sp,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -106,13 +106,16 @@ class _MainViewState extends State<MainView> {
                         children: [
                           TeamTitle(title: kTeamTwo),
                           SizedBox(
-                            width: MediaQuery.widthOf(context) * .45,
-                            height: 250,
+                            height: 200.h,
+                            width: 150.w,
                             child: FittedBox(
                               fit: BoxFit.contain,
                               child: Text(
                                 "$awayPoints",
-                                style: TextStyle(fontSize: 170.sp),
+                                style: TextStyle(
+                                  fontSize: 150.sp,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
@@ -136,7 +139,7 @@ class _MainViewState extends State<MainView> {
                 ],
               ),
             ),
-            Container(height: 40),
+            Container(height: 20.h),
             ElevatedButton(
               onPressed: () {
                 setState(() {
@@ -158,7 +161,7 @@ class _MainViewState extends State<MainView> {
                 ),
               ),
             ),
-            Container(height: 30),
+            Container(height: 30.h),
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TeamTitle extends StatelessWidget {
   const TeamTitle({super.key, required this.title});
@@ -13,11 +14,11 @@ class TeamTitle extends StatelessWidget {
         elevation: 10,
         color: Color(0xff1E1E1E),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
           child: Text(
             title,
             style: TextStyle(
-              fontSize: 40,
+              fontSize: 40.sp,
               color: Colors.deepOrange,
               fontWeight: FontWeight.bold,
             ),
